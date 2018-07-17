@@ -8,7 +8,7 @@ trait ParsesUsisJson
     {
         static $cached = [];
 
-        if (isset($filename, $cached)) {
+        if (isset($cached[$filename])) {
             $data = $cached[$filename];
         } else {
             $data = @json_decode(file_get_contents($filename), true);

@@ -14,7 +14,7 @@ class Section extends Model
 
     protected $with = [
         'course', 'faculty', 'semester',
-        'schedule',
+        'schedules',
     ];
 
     public function course()
