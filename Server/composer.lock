@@ -4,8 +4,87 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1b89c87f0e2c24bb36aed4854a49b92",
+    "content-hash": "d9b41b37663ed16bc0dc3ff36f4e6ebc",
     "packages": [
+        {
+            "name": "cybercog/laravel-eloquent-flag",
+            "version": "3.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cybercog/laravel-eloquent-flag.git",
+                "reference": "b172dcc873510e4cfef7c351c555fc768e78e559"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cybercog/laravel-eloquent-flag/zipball/b172dcc873510e4cfef7c351c555fc768e78e559",
+                "reference": "b172dcc873510e4cfef7c351c555fc768e78e559",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.2.0|~5.3.0|~5.4.0|~5.5.0|~5.6.0",
+                "php": "^5.6|^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.10",
+                "orchestra/database": "~3.4.0|~3.5.0|~3.6.0",
+                "orchestra/testbench": "~3.4.0|~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^5.7|^6.2|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cog\\Flag\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Komarev",
+                    "email": "a.komarev@cybercog.su",
+                    "homepage": "http://ell.folio.su",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Eloquent boolean & timestamp flagged attributes behavior.",
+            "homepage": "https://github.com/cybercog/laravel-eloquent-flag",
+            "keywords": [
+                "accepted",
+                "activated",
+                "active",
+                "approved",
+                "boolean",
+                "closed",
+                "cog",
+                "cybercog",
+                "deactivated",
+                "ended",
+                "expired",
+                "expiry",
+                "flag",
+                "inactive",
+                "kept",
+                "laravel",
+                "opened",
+                "persisted",
+                "published",
+                "scopes",
+                "state",
+                "status",
+                "timestamp",
+                "toggle",
+                "trait",
+                "unaccepted",
+                "unapproved",
+                "unkept",
+                "unpublished",
+                "unverified",
+                "verified"
+            ],
+            "time": "2018-02-16T21:49:13+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
