@@ -19,6 +19,7 @@ class CreateSectionsTable extends Migration
             $table->unsignedInteger('faculty_id');
             $table->unsignedInteger('semester_id');
             $table->unsignedTinyInteger('number');
+            $table->unsignedSmallInteger('seats');
 
             $table->unique(['course_id', 'semester_id', 'number']);
 

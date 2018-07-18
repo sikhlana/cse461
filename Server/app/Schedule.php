@@ -17,12 +17,7 @@ class Schedule extends Model
         return $this->belongsTo(Section::class);
     }
 
-    public function startPeriod()
-    {
-        return $this->belongsTo(Period::class);
-    }
-
-    public function endPeriod()
+    public function period()
     {
         return $this->belongsTo(Period::class);
     }

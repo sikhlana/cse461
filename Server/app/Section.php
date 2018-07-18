@@ -9,7 +9,7 @@ class Section extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'number',
+        'number', 'seats',
     ];
 
     protected $with = [

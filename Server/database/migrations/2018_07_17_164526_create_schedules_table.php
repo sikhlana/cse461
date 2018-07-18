@@ -16,8 +16,7 @@ class CreateSchedulesTable extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('section_id');
-            $table->unsignedInteger('start_period_id');
-            $table->unsignedInteger('end_period_id')->nullable();
+            $table->unsignedInteger('period_id');
             $table->string('room', 8)->index();
 
             $table->foreign('section_id')
@@ -25,12 +24,7 @@ class CreateSchedulesTable extends Migration
                   ->on('sections')
                   ->onDelete('cascade');
 
-            $table->foreign('start_period_id')
-                  ->references('id')
-                  ->on('periods')
-                  ->onDelete('cascade');
-
-            $table->foreign('end_period_id')
+            $table->foreign('period_id')
                   ->references('id')
                   ->on('periods')
                   ->onDelete('cascade');
