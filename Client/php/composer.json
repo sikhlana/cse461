@@ -1,0 +1,17 @@
+{
+    "name": "sikhlana/cse461-client-php",
+    "type": "project",
+    "require": {
+        "symfony/console": "^4.1",
+        "vlucas/phpdotenv": "^2.5",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Saif M.",
+            "email": "xoxo@saifmahmud.name"
+        }
+    ],
+    "minimum-stability": "stable"
+}
