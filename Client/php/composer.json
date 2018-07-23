@@ -2,7 +2,8 @@
     "name": "sikhlana/cse461-client-php",
     "type": "project",
     "require": {
-        "symfony/console": "^4.1",
+        "php": "^7.0.30",
+        "symfony/console": "^4.0",
         "vlucas/phpdotenv": "^2.5",
         "guzzlehttp/guzzle": "^6.3"
     },

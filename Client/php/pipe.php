@@ -26,29 +26,36 @@ $client = new \GuzzleHttp\Client([
 
 try {
     $response = $client->post('https://attendance.saifmahmud.name/api/devices/record', [
-        'form_data' => [
-            $input->getArgument('type') => base64_decode($input->getArgument('value')),
+        'form_params' => [
+            $input->getArgument('type') => base64_decode(trim($input->getArgument('value'))),
         ]
     ]);
 
-    $json = json_decode($response->getBody()->getContents());
+    $json = json_decode($response->getBody()->getContents(), true);
 
     if ($response->getStatusCode() === 200) {
         ret($json['message']);
     } else {
         ret($json['message'], 'error');
     }
+} catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    if ($e->getResponse()->getStatusCode() === 422) {
+        ret('Device malfunc', 'error');
+    } else if ($e->getResponse()->getStatusCode() === 400) {
+        $json = json_decode($e->getResponse()->getBody()->getContents(), true);
+        ret($json['message'], 'error');
+    } else {
+        ret('Server error', 'error');
+    }
 } catch (\GuzzleHttp\Exception\TransferException $e) {
     ret('Network error', 'error');
 }
 
-if (! function_exists('ret')) {
-    function ret($message, $type = 'success')
-    {
-        echo json_encode(compact([
-            'type', 'message',
-        ]));
+function ret($message, $type = 'success')
+{
+    echo json_encode(compact([
+        'type', 'message',
+    ]));
 
-        exit;
-    }
+    exit;
 }
