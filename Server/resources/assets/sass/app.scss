@@ -1,0 +1,46 @@
+
+// Variables
+@import "variables";
+
+@import "bootstrap";
+
+html#bracu {
+  body {
+    min-height: 100vh;
+    background: $body-bg;
+
+    @import "partials/*.scss";
+    @import "modules/*.scss";
+
+    section#main {
+      min-height: calc(100vh - 105px);
+    }
+
+    header#header + section#main {
+      min-height: calc(100vh - 205px);
+    }
+
+    section#main {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .ui.main.container {
+      background: $content-bg;
+      padding: 30px 15px;
+    }
+
+    div.content.with.background {
+      background: $content-bg;
+      padding: 30px 15px;
+      border-radius: 3px;
+
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  @import "pages/*.scss";
+  @import "dashboard";
+}

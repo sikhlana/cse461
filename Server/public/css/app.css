@@ -1,0 +1,354 @@
+body.dimmed #app {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+a {
+  cursor: pointer;
+}
+
+.ui.small.form {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 450px;
+}
+
+.field > label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.5px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  line-height: 20px;
+}
+
+.field > label > small {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+.field > label > small::before {
+  content: '(';
+}
+
+.field > label > small::after {
+  content: ')';
+}
+
+.field + .field,
+.fields + .field,
+.field + .fields,
+.fields + .fields,
+.fields + .ui.button,
+.field + .ui.button {
+  margin-top: 20px !important;
+}
+
+.fields > .field {
+  margin-top: 0 !important;
+}
+
+.ui.button:not(.dropdown) {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+.ql-editor {
+  min-height: 100px;
+  max-height: 250px;
+}
+
+html#bracu body {
+  min-height: 100vh;
+  background: #ebeff2;
+}
+
+html#bracu body footer#footer {
+  width: 100%;
+  background: #2f3e49;
+  padding: 30px 40px;
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html#bracu body footer#footer p.copyright {
+  color: #ebeff2;
+  font-weight: 300;
+  font-size: 13px;
+  display: block;
+  text-align: center;
+  line-height: 1.7;
+  margin: 0;
+}
+
+html#bracu body footer#footer p.copyright > span {
+  color: #ff5a5f;
+}
+
+html#bracu body footer#footer p.copyright > a {
+  color: #ebeff2 !important;
+}
+
+html#bracu body header#header {
+  height: 100px;
+  width: 100%;
+  background: #435868;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+html#bracu body header#header #navigation {
+  width: 100%;
+  max-width: 1127px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html#bracu body header#header #navigation a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #dce3e8;
+  -webkit-transition: color 0.2s linear 0s;
+  transition: color 0.2s linear 0s;
+  min-width: 75px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 10px 5px;
+  border-radius: 3px;
+}
+
+html#bracu body header#header #navigation a > i.icon {
+  display: block;
+  font-size: 20px;
+  margin: 0;
+}
+
+html#bracu body header#header #navigation a > span {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+html#bracu body header#header #navigation a[data-selected],
+html#bracu body header#header #navigation a:hover {
+  color: #ffffff;
+}
+
+html#bracu body header#header #navigation a:first-child {
+  margin-left: 0;
+}
+
+html#bracu body header#header #navigation a:last-child {
+  margin-right: 0;
+}
+
+html#bracu body .image.uploader {
+  display: block;
+  border-radius: 3px;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 2px;
+  z-index: 3;
+  border: 2px solid #ebeff2;
+}
+
+html#bracu body .image.uploader input[type=file],
+html#bracu body .image.uploader .placeholder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+html#bracu body .image.uploader input[type=file] {
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+
+html#bracu body .image.uploader .placeholder {
+  z-index: 1;
+  background: no-repeat center center/cover #ebeff2;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+}
+
+html#bracu body .avatar.uploader {
+  border-radius: 50%;
+}
+
+html#bracu body .avatar.uploader .placeholder {
+  border-radius: 50%;
+}
+
+html#bracu body .empty.list {
+  display: block;
+  margin: 60px 0;
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+}
+
+html#bracu body [data-item-list] tbody > tr {
+  -webkit-transition: background 100ms linear 0s;
+  transition: background 100ms linear 0s;
+}
+
+html#bracu body [data-item-list] tbody > tr.selected {
+  background: #fff7ed;
+}
+
+html#bracu body [data-item-list] tbody > tr:hover {
+  background: #f1fffa;
+}
+
+html#bracu body [data-item-list] tbody > tr td.title small {
+  display: block;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+html#bracu body [data-item-list] tbody > tr td.title small span {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+html#bracu body section#main {
+  min-height: calc(100vh - 105px);
+}
+
+html#bracu body header#header + section#main {
+  min-height: calc(100vh - 205px);
+}
+
+html#bracu body section#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+html#bracu body .ui.main.container {
+  background: #ffffff;
+  padding: 30px 15px;
+}
+
+html#bracu body div.content.with.background {
+  background: #ffffff;
+  padding: 30px 15px;
+  border-radius: 3px;
+}
+
+html#bracu body div.content.with.background:not(:first-child) {
+  margin-top: 30px;
+}
+
+html#bracu body.error.page .ui.header {
+  padding-top: 60px;
+}
+
+html#bracu body.error.page .message {
+  font-size: 20px;
+  font-weight: 300;
+  color: #949494;
+  text-align: center;
+}
+
+html#bracu body.login.page section#main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+html#bracu body.login.page section#main .wrapper form {
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+html#bracu nav.secondary.navigation {
+  margin: -30px -15px 30px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background: #6f8ca2;
+}
+
+html#bracu nav.secondary.navigation a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 0 15px;
+  color: #ebeff2;
+}
+
+html#bracu nav.secondary.navigation a[data-selected],
+html#bracu nav.secondary.navigation a:hover {
+  background: #435868;
+}
+

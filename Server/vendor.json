@@ -1,0 +1,23 @@
+{
+  "local": {
+    "css": [
+
+    ],
+    "js": [
+      "axios",
+      "lodash",
+      "noty",
+      "nprogress",
+      "popper.js",
+      "vue"
+    ]
+  },
+  "cdn": {
+    "css": [
+
+    ],
+    "js": [
+
+    ]
+  }
+}

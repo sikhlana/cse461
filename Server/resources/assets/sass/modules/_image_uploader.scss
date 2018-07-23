@@ -1,0 +1,42 @@
+.image.uploader {
+  display: block;
+  border-radius: 3px;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box;
+  padding: 2px;
+  z-index: 3;
+
+  border: 2px solid $body-bg;
+
+  input[type=file],
+  .placeholder {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  input[type=file] {
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .placeholder {
+    z-index: 1;
+    background: no-repeat center center / cover $body-bg;
+    border: 2px solid $content-bg;
+    border-radius: 3px;
+  }
+}
+
+.avatar.uploader {
+  border-radius: 50%;
+
+  .placeholder {
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,27 @@
+footer#footer {
+  width: 100%;
+  background: darken($body-bg, 70%);
+  padding: 30px 40px;
+  height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p.copyright {
+    color: $body-bg;
+    font-weight: 300;
+    font-size: 13px;
+    display: block;
+    text-align: center;
+    line-height: 1.7;
+    margin: 0;
+
+    > span {
+      color: #ff5a5f;
+    }
+
+    > a {
+      color: $body-bg !important;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+
+body.dimmed {
+  #app {
+    filter: blur(2px);
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.ui.small.form {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 450px;
+}
+
+.field > label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.5px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  line-height: 20px;
+
+  > small {
+    font-size: 0.75em;
+    opacity: 0.7;
+
+    &::before {
+      content: '(';
+    }
+
+    &::after {
+      content: ')';
+    }
+  }
+}
+
+.field + .field,
+.fields + .field,
+.field + .fields,
+.fields + .fields,
+.fields + .ui.button,
+.field + .ui.button {
+  margin-top: 20px !important;
+}
+
+.fields > .field {
+  margin-top: 0 !important;
+}
+
+.ui.button:not(.dropdown) {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+.ql-editor {
+  min-height: 100px;
+  max-height: 250px;
+}

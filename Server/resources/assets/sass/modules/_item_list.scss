@@ -1,0 +1,32 @@
+.empty.list {
+  display: block;
+  margin: 60px 0;
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+}
+
+[data-item-list] {
+  tbody > tr {
+    transition: background 100ms linear 0s;
+
+    &.selected {
+      background: #fff7ed;
+    }
+
+    &:hover {
+      background: #f1fffa;
+    }
+
+    td.title small
+    {
+      display: block;
+      color: rgba(0, 0, 0, 0.54);
+
+      span
+      {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
+  }
+}

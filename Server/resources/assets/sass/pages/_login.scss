@@ -1,0 +1,16 @@
+body.login.page {
+  section#main {
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      form {
+        padding: 30px;
+        background: $content-bg;
+        border-radius: 4px;
+      }
+    }
+  }
+}
