@@ -45,20 +45,27 @@ class DeviceController extends Controller
 
         //$now = now();
         $now = Carbon::create(2018, 7, 23, 12, 25, 34);
-        /** @var Schedule $schedule */
-        $schedule = null;
+        $now->setTimezone('Asia/Dhaka');
 
-        $device->schedules->each(function (Schedule $sch) use (&$schedule, $now) {
+        /** @var Schedule $schedule */
+        $schedule = $device->schedules->first(function (Schedule $sch) use (&$schedule, $now) {
             if (strtolower($now->format('D')) != $sch->day) {
-                return;
+                return false;
             }
 
-            $time = Carbon::createFromTimeString($sch->starts_at);
+            $time = (clone $now)->setTimeFromTimeString($sch->starts_at);
+            $time->setTimezone('Asia/Dhaka');
 
             if (abs($time->timestamp - $now->timestamp) <= 10 * 60) {
-                $schedule = $sch;
+                return true;
             }
+
+            return false;
         });
+
+        if (is_null($schedule)) {
+            return $this->error('No schedule');
+        }
 
         if (! $enrollment = $this->getStudentEnrollment($student, $schedule->section)) {
             return $this->error('Not enrolled');
